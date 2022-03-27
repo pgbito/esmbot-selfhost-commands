@@ -23,17 +23,9 @@ git clone https://github.com/ImageMagick/ImageMagick
 cd ImageMagick
 echo 'Compilando y instalando ImageMagick'
 ./configure --with-modules
-st=$?
-[ $st -eq 0 ] && echo "..." || echo "Se han encontrado errores al instalar ImageMagick." && read -p 'Presione cualquier tecla para salir...' && exit 1
 make
-st=$?
-[ $st -eq 0 ] && echo "..." || echo "Se han encontrado errores al instalar ImageMagick." && read -p 'Presione cualquier tecla para salir...' && exit 1
 sudo make install
-st=$?
-[ $st -eq 0 ] && echo "..." || echo "Se han encontrado errores al instalar ImageMagick." && read -p 'Presione cualquier tecla para salir...' && exit 1
 sudo ldconfig /usr/local/lib
-st=$?
-[ $st -eq 0 ] && echo "..." || echo "Se han encontrado errores al instalar ImageMagick." && read -p 'Presione cualquier tecla para salir...' && exit 1
 inode
 echo 'Clonando el repositorio de esmbot.'\
 cd ~
